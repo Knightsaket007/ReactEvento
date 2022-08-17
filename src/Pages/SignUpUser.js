@@ -1,7 +1,7 @@
 function SignUpUser(){
     <>
     <div>
-        <h1>helloqw world</h1>
+        <h1>helloq Mars</h1>
 
     </div>
     </>
