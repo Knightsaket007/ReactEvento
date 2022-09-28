@@ -1,5 +1,6 @@
 import "./Custom.css"
 import Navbar from "./Components/Navbar";
+import Cards from "./Components/Cards";
 function Home() {
     return (
         <>
@@ -43,6 +44,10 @@ function Home() {
       </div>
    
             {/* <img src="/ReactEvento/images/Pic.jpg"></img> */}
+
+            {/* Cards */}
+            <Cards/>
+
         </>
     )
 }

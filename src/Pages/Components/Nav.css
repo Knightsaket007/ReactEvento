@@ -7,12 +7,13 @@
     font-family: 'segoe ui';
   }
   
+  
   .nav {
     height: 50px;
     width: 100%;
     background-color: #0b0b0b;
     position: relative;
-    box-shadow:  0px 2px 25px 2px rgb(0, 0, 0);
+     box-shadow:  0px 2px 25px 2px rgb(0, 0, 0);
     z-index: 11;
   }
   .nav-title{
@@ -145,10 +146,12 @@
       width: 100%;
     }
     .nav-btn:hover span:nth-child(2){
-        transform-origin: 0 0;
+      color:blue;  
+      transform-origin: 0 0;
+        
         transition: 0.4s;
-        transform: translateX(10px);
-        background-color: var(--primary);
+        transform:translateX(10px);
+       
     }
     .nav > #nav-check:not(:checked) ~ .nav-links {
       height: 0px;
@@ -157,6 +160,8 @@
       height: calc(100vh - 50px);
       overflow-y: auto;
     }
+    
+    /* LOGIN BUTTON */
 
     .sign-button{
       position: absolute;
@@ -212,7 +217,7 @@
    
       .gr-shadow2 {
          
-                  box-shadow: 0px 5px 20px 10px hsl(81, 79%, 78%);
+                  box-shadow: 0px 5px 50px 10px hsl(81, 79%, 78%);
          
       }
    
@@ -220,13 +225,13 @@
           right: 0;
           bottom: 0;
           
-                  box-shadow: 0px 5px 20px 10px #F867FD;
+                  box-shadow: 0px 5px 50px 10px #F867FD;
                   animation:moveBg1 2.5s infinite;
       }
    
       .gr-shadow2::after {        
           bottom: 0;
-                  box-shadow: 0px 5px 20px 10px #F3B5AE;
+                  box-shadow: 0px 5px 50px 10px #F3B5AE;
                   animation:moveBg2 3s infinite;
       }
    

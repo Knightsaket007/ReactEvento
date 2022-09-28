@@ -2,16 +2,18 @@ h1{
     color: blue;
 }
 body{
-  background-color: rgb(37, 33, 33);
+  background-color: rgb(46, 40, 40);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 
 /* SLIDER */
-html, body {
+/* html, body {
     margin: 0px;
     padding: 0px;
     background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
-}
+} */
 
 .carousel {
     position: relative;
