@@ -30,7 +30,7 @@ function Navbar() {
         <div className="ct-btn">
                 <div className="gr-move">
                     <span className="gr-shadow2"></span>                        
-                    <button className="gradient-neon">Login</button>
+                    <button className="gradient-neon" ><Link to="/">Login</Link></button>
                 </div>
             </div>
       </div>
