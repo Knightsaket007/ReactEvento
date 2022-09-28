@@ -1,15 +1,16 @@
 import './Nav.css'
-import {Link} from 'react-router-dom'
-function Navbar(){
-    return(
-        <>
-         <div className="nav">
+import { Link } from 'react-router-dom'
+function Navbar() {
+  return (
+    <>
+      <div className="nav">
         <input type="checkbox" id="nav-check" />
         <div className="nav-header">
-          <div className="nav-title" style={{fontSize:"28px"}}>
+          <div className="nav-title" style={{ fontSize: "28px" }}>
             Evento
           </div>
         </div>
+
         <div className="nav-btn">
           <label htmlFor="nav-check">
             <span />
@@ -24,8 +25,21 @@ function Navbar(){
           <Link to="" >About</Link>
           <Link to="" >Contact</Link>
         </div>
+{/* my edits */}
+        <div className='sign-button'>
+        <div className="ct-btn">
+                <div className="gr-move">
+                    <span className="gr-shadow2"></span>                        
+                    <button className="gradient-neon">Login</button>
+                </div>
+            </div>
       </div>
-        </>
-    )
+{/* my edits */}
+      </div>
+
+      
+      
+    </>
+  )
 }
 export default Navbar

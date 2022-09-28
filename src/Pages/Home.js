@@ -10,15 +10,17 @@ function Home() {
         <div className="carousel-inner">
           <input className="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden defaultChecked="checked" />
           <div className="carousel-item">
-            <img alt="wait" src="http://fakeimg.pl/2000x800/0079D8/fff/?text=Without" />
+                      
+                       <img src="/ReactEvento/images/neon001.gif" alt="wait" ></img>
+            
           </div>
           <input className="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden />
           <div className="carousel-item">
-            <img alt="src" src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript" />
+          <img src="/ReactEvento/images/neon002.gif" alt="wait" ></img>
           </div>
           <input className="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden />
           <div className="carousel-item">
-            <img alt="a;t" src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel" />
+          <img src="/ReactEvento/images/neon003.gif" alt="wait" ></img>
           </div>
           <label htmlFor="carousel-3" className="carousel-control prev control-1">‹</label>
           <label htmlFor="carousel-2" className="carousel-control next control-1">›</label>

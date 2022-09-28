@@ -13,7 +13,7 @@
     background-color: #0b0b0b;
     position: relative;
     box-shadow:  0px 2px 25px 2px rgb(0, 0, 0);
-    z-index: 12;
+    z-index: 11;
   }
   .nav-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -100,6 +100,11 @@
   .nav > #nav-check {
     display: none;
   }
+
+  .sign-button{
+  
+    display:none;
+  }
   
   @media (max-width:600px) {
     .nav > .nav-btn {
@@ -152,4 +157,80 @@
       height: calc(100vh - 50px);
       overflow-y: auto;
     }
+
+    .sign-button{
+      position: absolute;
+      top: 0.9rem;
+      right: 3.5rem;
+      display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    
+    .gr-move {
+      position: relative;
   }
+   
+      .gr-move .gradient-neon {
+         
+          background-image: linear-gradient(90deg, #9900FF , #F60F5C, #99FF66);
+          background-size: 300%;
+          border: none;
+          color: #fff;
+          border-radius: 4px;
+          height: 30px;
+          width: 50px;
+          margin-top: -5px;
+      }
+   
+      .gr-move:hover .gradient-neon {
+          
+                  animation:moveInnerBg 4s infinite;
+      }
+       
+      .gr-move:hover .gradient-neon{
+          
+          background-image: linear-gradient(90deg, #E13AFA , #FF69B4, #98FB98);
+      }
+   
+      .gr-shadow2, .gr-shadow2::before, .gr-shadow2::after {
+          content:'';
+          position: absolute;
+          top: 0px;
+          border-radius: 4px;
+          width: 50px;
+          height: 11px;
+          z-index: -1;
+          
+          transition: all .3s ease-in;            
+          opacity:0;
+      }
+   
+      .gr-move:hover .gr-shadow2, .gr-shadow2::before, .gr-shadow2::after {
+          opacity:1;
+      }
+   
+      .gr-shadow2 {
+         
+                  box-shadow: 0px 5px 20px 10px hsl(81, 79%, 78%);
+         
+      }
+   
+      .gr-shadow2::before {        
+          right: 0;
+          bottom: 0;
+          
+                  box-shadow: 0px 5px 20px 10px #F867FD;
+                  animation:moveBg1 2.5s infinite;
+      }
+   
+      .gr-shadow2::after {        
+          bottom: 0;
+                  box-shadow: 0px 5px 20px 10px #F3B5AE;
+                  animation:moveBg2 3s infinite;
+      }
+   
+  }
+
+  
+  
