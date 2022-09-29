@@ -9,7 +9,7 @@ let App=()=>{
 
       <BrowserRouter>
         <Routes>
-        <Route path="/ReactEvento" element={<Home/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="img" element={<Forimg/>}></Route>
         </Routes>
         </BrowserRouter>
