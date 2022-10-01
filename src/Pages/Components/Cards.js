@@ -17,7 +17,7 @@ function Cards(){
         <section className="card">
           <div className="card_inner">
             <div className="card_inner__circle">
-              <img alt="im" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/rocket.png" />
+              <img  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/rocket.png" />
             </div>
             <div className="card_inner__header">
               {/* <img src="http://www.pixeden.com/media/k2/galleries/343/002-city-vector-background-town-vol2.jpg" /> */}

@@ -2,12 +2,16 @@ import "./Footer.css"
 function Footer() {
   return (
     <>
-      {/* <div className="outer"> */}
-        <div className="main-footer">
-        {/* </div> */}
-        <div className="flexbox-container">
-          {/* <div className="flex-item flex-item-1"></div>
-        <div className="flex-item flex-item-2"></div> */}
+      <div className="outer">
+        <div className="main ">
+          <span></span>
+          <span></span>
+        </div>
+        <div className="foot-container">
+        <div className=" footer">   
+          <span></span>
+          <span></span>
+        </div>
         </div>
       </div>
     </>
