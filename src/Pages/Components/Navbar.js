@@ -8,7 +8,7 @@ function Navbar() {
         <div className="nav-header">
           <div className="nav-title" style={{ fontSize: "28px" }}>
             Evento
-          </div>
+          </div> 
         </div>
 
         <div className="nav-btn">

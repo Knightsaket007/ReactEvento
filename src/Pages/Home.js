@@ -44,11 +44,17 @@ function Home() {
         </div>
       </div>
 
+      {/* <div className="bg-image"></div> */}
+      <div className="info-101">
+        <div className="sub-info"><h1>fhdjfjhfjvfjv jb cjj j vj jfvdh vju juv fdjv jd vj,</h1>
+        </div>
+
+        <div className="sub-img"><img className="img-ghost" src="./ReactEvento/images/ghost-blue300.png" alt="hello" ></img></div>
+      </div>
       {/* <img src="/ReactEvento/images/Pic.jpg"></img> */}
 
-      {/* Cards */}
       <Cards />
-      <Footer/>
+      <Footer />
     </>
   )
 }
