@@ -1,19 +1,45 @@
-h1{
-    color: blue;
-}
+
 body{
   background-color: rgb(46, 40, 40);
   overflow-x: hidden;
   width: 100%;
 }
+.head_text{
+    font-size: 50px;
+}
 
 
-/* SLIDER */
-/* html, body {
-    margin: 0px;
-    padding: 0px;
-    background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
-} */
+.bg_img{
+  display: grid;
+  place-items: center;
+    width: 97%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    /* margin-right: 10px; */
+    /* margin-left: 15px; */
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 60px;
+    box-shadow:  0px 2px 25px 10px rgb(0, 0, 0);
+    background-image: url("../img/party.jpeg"); 
+    background: cover;  
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+@media(max-width:800px){
+   .head_text{
+    font-size: 30px;
+   }
+.bg_img{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+}
+
 
 .carousel {
     position: relative;
@@ -131,4 +157,29 @@ body{
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
+
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255) }
+  }
 
