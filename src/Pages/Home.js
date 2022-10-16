@@ -2,6 +2,8 @@ import "./Custom.css"
 import Navbar from "./Components/Navbar";
 import Cards from "./Components/Cards";
 import Footer from "./Components/Footer";
+
+// import image1 from "./ReactEvento/img/front001.png"
 function Home() {
   return (
     <>
@@ -43,15 +45,16 @@ function Home() {
           </ol>
         </div>
       </div>
-
-      {/* <div className="bg-image"></div> */}
-      <div className="info-101">
-        <div className="sub-info"><h1>fhdjfjhfjvfjv jb cjj j vj jfvdh vju juv fdjv jd vj,</h1>
+      <div className="bg_img"  >
+      <div class="typewriter">
+        <h1 className="head_text"> Book your events</h1>
         </div>
-
-        <div className="sub-img"><img className="img-ghost" src="./ReactEvento/images/ghost-blue300.png" alt="hello" ></img></div>
+        <br></br>
+  <p>       Join and participate in events near by you </p>
       </div>
       {/* <img src="/ReactEvento/images/Pic.jpg"></img> */}
+
+
 
       <Cards />
       <Footer />
