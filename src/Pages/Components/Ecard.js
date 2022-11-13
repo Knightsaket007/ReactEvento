@@ -115,9 +115,9 @@ function Ecards() {
 
       
 
-      <img className='img-ended-event' src="../ReactEvento/images/fest.svg" />
+      <img className='img-ended-event' alt="fest"src="../ReactEvento/images/fest.svg"/>
       
-    <img className='img-ended-park' src="../ReactEvento/images/park.svg" />
+    {/* <img className='img-ended-park' alt="park" src="../ReactEvento/images/park.svg"/> */}
 
 
     

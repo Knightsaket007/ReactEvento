@@ -7,7 +7,7 @@ function Navbar() {
         <input type="checkbox" id="nav-check" />
         <div className="nav-header">
           <div className="nav-title" style={{ fontSize: "28px" }}>
-            Evento
+          <Link to="/" > Evento</Link>
           </div> 
         </div>
 
@@ -19,11 +19,10 @@ function Navbar() {
           </label>
         </div>
         <div className="nav-links">
-          <Link to="" >Github</Link>
-          <Link to="" >Home</Link>
-          <Link to="/Events" >Events</Link>
-          <Link to="" >About</Link>
-          <Link to="" >Contact</Link>
+        <Link to="/" >Home</Link>
+        <Link to="/Events" >Events</Link>
+        <Link to="" >About</Link>
+        <Link to="" >Contact</Link>
         </div>
 {/* my edits */}
         <div className='sign-button'>
