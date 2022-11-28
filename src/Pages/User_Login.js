@@ -18,7 +18,7 @@ function User_Login() {
         }
     return (
         <>
-            <form class="account-form">
+            <form className="account-form">
 
                 <label style={{ color: 'white', width: '100px', height: '40px' }} >Email ID</label>
                 <input type="text" onChange={(e) => setEmail(e.target.value)}></input>

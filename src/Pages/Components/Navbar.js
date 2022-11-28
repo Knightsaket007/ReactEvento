@@ -7,7 +7,7 @@ function Navbar() {
         <input type="checkbox" id="nav-check" />
         <div className="nav-header">
           <div className="nav-title" style={{ fontSize: "28px" }}>
-          <Link to="/" > Evento</Link>
+          <Link to="/" style={{textDecoration:"none",color:"white"}}>Evento</Link>
           </div> 
         </div>
 
@@ -21,7 +21,7 @@ function Navbar() {
         <div className="nav-links">
         <Link to="/" >Home</Link>
         <Link to="/Events" >Events</Link>
-        <Link to="" >About</Link>
+        <Link to="/about" >About</Link>
         <Link to="" >Contact</Link>
         </div>
 {/* my edits */}
@@ -29,7 +29,7 @@ function Navbar() {
         <div className="ct-btn">
                 <div className="gr-move">
                     <span className="gr-shadow2"></span>                        
-                    <button className="gradient-neon" ><Link to="/">Login</Link></button>
+                    <button className="gradient-neon" ><Link to="/"  style={{textDecoration:"none",color:"white"}}>Login</Link></button>
                 </div>
             </div>
       </div>

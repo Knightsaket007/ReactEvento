@@ -57,29 +57,33 @@ function Home() {
         </div>
         <br></br>
         <p> Join and participate in events near by you </p>
+        <button style={{fontSize:"20px"}} className="custom-btn btn-2">JOIN</button>
       </div>
 
 
       <Cards />
 
       {/* FIRST */}
-      <div class="div-cool-container">
-        <div classname="img-cool1">
-          <img alt="Party" src="./ReactEvento/images/Party1.jpeg" className="img-cool1" /></div>
+      <div className="div-cool-container">
+        <div className="img-cool1">
+          <img alt="Party" src="./ReactEvento/images/Party1.jpeg" className="img-inside" /></div>
 
         <div className="div-cool">
           <h1 className="heading">Nearby Concert</h1>
-          <p className="para" align="justify">Organizer approved by us, for more information please read our
-            policy In corporate finance and capital markets, refunding is the process where a fixed-income issuer retires some of their outstanding callable bonds and replaces them with new bonds, usually at more favorable terms to the issuer as to reduce financing costs. The new
-            bonds are used to create a sinking fund to repay the original bond issues, known as refunded bonds.</p>
-
+          <div className="size">
+            <p className="para" align="justify">Organizer approved by us, for more information please read our
+              policy In corporate finance and capital markets, refunding is the process where a fixed-income issuer retires some of their outstanding callable bonds and replaces them with new bonds, usually at more favorable terms to the issuer as to reduce financing costs. The new
+              bonds are used to create a sinking fund to repay the original bond issues, known as refunded bonds.</p>
+          </div>
         </div>
         <br />  <br /> <br />
 
         {/* SECOUND */}
-        <div className="txt2-box"><p>Gaming</p>
+        <div className="txt2-box"><p></p>
 
-          <button class="custom-btn btn-2">Read More</button><div className="div-cool2" >
+          <button className="custom-btn btn-2">Read More</button>
+          <div className="div-cool2" >
+            <h1 className="heading">Gaming</h1>
             <p className="para2" align="justify">Online gaming events of your favorite games </p>
           </div>
 
@@ -90,24 +94,25 @@ function Home() {
 
         {/* THIRD */}
         <br /> <br /> <br /> <br /> <br /> <br /> <br />
-        <div classname="img-cool1">
-          <img alt="Party" src="./ReactEvento/images/Party.jpg" className="img-cool3" /></div>
+        <div className="img-cool1">
+          <img alt="Party" src="./ReactEvento/images/Party.jpg" className="img-inside" /></div>
         <div className="div-cool3">
           <h1 className="heading">Refundable <GiReceiveMoney /></h1>
-          <p className="para"align="justify">Your money will be refuned Immediately In corporate finance and capital markets, refunding is the process where a fixed-income issuer retires some of their
-            outstanding callable bonds and replaces them with new bonds, usually at more favorable terms to the issuer as to reduce financing costs. The new bonds are used to create a sinking
-            fund to repay the original bond issues, known as refunded bonds.</p>
-
+          <div className="size">
+            <p className="para" align="justify">Your money will be refuned Immediately In corporate finance and capital markets, refunding is the process where a fixed-income issuer retires some of their
+              outstanding callable bonds and replaces them with new bonds, usually at more favorable terms to the issuer as to reduce financing costs. The new bonds are used to create a sinking
+              fund to repay the original bond issues, known as refunded bonds.</p>
+          </div>
         </div>
-<div className="line-container">
-        <div className="line" ></div>
-</div>
+        <div className="line-container">
+          <div className="line" ></div>
+        </div>
       </div>
-      
 
 
 
-      <Footer/>
+
+      <Footer />
     </>
   )
 }

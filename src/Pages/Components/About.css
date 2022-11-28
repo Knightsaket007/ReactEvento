@@ -1,0 +1,15 @@
+.main-about-container{
+    height: 500px;
+    width: 95%;
+    background-color: rgb(47, 30, 70);
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.about-heading{
+   /* background-color: aquamarine; */
+   text-align: center;
+   
+}

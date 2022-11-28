@@ -53,6 +53,11 @@ body {
   .head_text {
     font-size: 30px;
   }
+  .size{
+    /* width: 80%; */
+    margin: 10px;
+
+  }
 
   .bg_img {
     padding-top: 90px;
@@ -89,7 +94,7 @@ body {
 .carousel-item img {
   display: block;
   height: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .carousel-control {
@@ -263,7 +268,7 @@ body {
   color: #fff;
   font-size: 20px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 
@@ -275,13 +280,18 @@ body {
   box-shadow: 0px 1px 30px 1px rgb(0, 0, 0);
 }
 
+.img-inside{
+  height: 250px;
+  width: 100%;
+}
+
 .img-cool2 {
   width: 37%;
   height: 240px;
   box-shadow: 0px 1px 30px 1px rgb(0, 0, 0);
   margin-top: 200px;
-
 }
+
 
 .img-cool3 {
   position: absolute;
@@ -295,7 +305,7 @@ body {
 .line-container {
   width: 100%;
 
-  margin-top: 230px;
+  margin-top:230px;
   left: 50%;
 }
 
@@ -327,8 +337,8 @@ body {
 
   .div-cool-container {
     position: relative;
-    top: 52px;
-    height: 1770px;
+    top: 5px;
+    height: 1800px;
   }
 
   .img-cool1 {
@@ -345,13 +355,14 @@ body {
   .img-cool3 {
     width: 100%;
     position: static;
+    margin-top: 50px
     /* margin-top: -10px; */
   }
 
   .txt2-box {
     width: 100%;
     text-align: center;
-    top: 440px
+    top: 490px
   }
 
   .div-cool {
@@ -371,7 +382,13 @@ body {
     width: 130px;
   }
 
+  .div-cool2{
+    margin-top: 115px;
+  
+  }
+
 }
+
 
 /* button */
 
@@ -435,8 +452,8 @@ button {
   color: white;
   width: 100%;
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: -15px;
+  margin-top: 5px;
+  
   font: 16px/22px DIN_Regular, Arial, Verdana, sans-serif;
 }
 
