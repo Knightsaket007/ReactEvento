@@ -1,0 +1,110 @@
+.sign-heading {
+  /* position: relative; */
+  /* background-color: blue; */
+  /* left: 140px; */
+  /* top: 110px; */
+  color: #ddd;
+  /* background-color: aqua; */
+  /* height: 100px; */
+}
+
+.advice {
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+} 
+ 
+.main-sign {
+  width: 95%; 
+  margin: 0 auto;
+  height: 100%;
+  background-color: rgb(32, 32, 31);
+  border-radius: 30px;
+  margin-top: 40px;
+  display: flex;
+  padding: 20px 20px 15px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-img-div {
+  width: 700px;
+  height: 700px;
+  /* background-color: bisque; */
+  margin-top: -50px;
+  margin-right: 20px;
+}
+
+.sign-img {
+  height: 100%;
+  width: 100%;
+}
+
+.form-div {
+  /* padding-top: -220px; */ 
+  text-align: center;
+  height: max-content;
+  width: 500px;
+  /* background-color: rgb(206, 123, 16); */
+  /* margin-top: 100px; */
+  /* margin-left: 100px; */
+  z-index: 10;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+  color: white;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.imp {
+  font-size: 18px;
+  color: rgb(152, 43, 224);
+
+}
+
+.inp {
+  outline: none;
+  border-radius: 3px;
+}
+
+
+/* mobile */
+
+@media(max-width:750px) {
+  .main-sign {
+    display: inline;
+  }
+
+  .form-div {
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 20px;
+  }
+
+  .sign-img-div {
+    margin-top: 150px;
+    width: 90%;
+    height: 50%;
+  }
+ 
+  .sign-heading {
+    position: static;
+    text-align: center;
+    margin-top: 30px;
+  }
+}

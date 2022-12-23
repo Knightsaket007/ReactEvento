@@ -1,6 +1,6 @@
 import './Nav.css'
 import { Link } from 'react-router-dom'
-function Navbar() {
+function Navbar() { 
   return (
     <>
       <div className="nav">
@@ -8,10 +8,10 @@ function Navbar() {
         <div className="nav-header">
           <div className="nav-title" style={{ fontSize: "28px" }}>
           <Link to="/" style={{textDecoration:"none",color:"white"}}>Evento</Link>
-          </div> 
-        </div>
+          </div>    
+        </div> 
 
-        <div className="nav-btn">
+        <div className="nav-btn"> 
           <label htmlFor="nav-check">
             <span />
             <span />
@@ -29,10 +29,12 @@ function Navbar() {
         <div className="ct-btn">
                 <div className="gr-move">
                     <span className="gr-shadow2"></span>                        
-                    <button className="gradient-neon" ><Link to="/"  style={{textDecoration:"none",color:"white"}}>Login</Link></button>
+                    <button className="gradient-neon" ><Link to="/login"  style={{textDecoration:"none",color:"white"}}>Login</Link></button>
+     
+
                 </div>
             </div>
-      </div>
+      </div> 
 {/* my edits */}
       </div>
 
@@ -41,4 +43,4 @@ function Navbar() {
     </>
   )
 }
-export default Navbar
+export default Navbar;

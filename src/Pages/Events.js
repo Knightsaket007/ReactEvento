@@ -23,6 +23,9 @@ function Events() {
       
            
             <Cards/>
+            <div className="line-container">
+          <div className="line"></div>
+         </div> 
             {/* <Ecards/> */}
             <Footer />
         </>
