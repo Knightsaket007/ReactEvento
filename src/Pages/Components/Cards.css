@@ -35,6 +35,12 @@ width: 100%;
 margin-top: 10px;
 }
 
+.title-div{
+height: 65px;
+
+/* background-color: aquamarine; */
+}
+
 .card-content{  
   height: 230px;
   width: 88%;
@@ -63,7 +69,7 @@ a{
 }
 
 .head-para :hover{
- color:rgb(255, 123, 233);
+ color:rgb(8, 177, 255);
 }
 .price-cut{
   text-decoration: line-through 3.5px red;
@@ -164,7 +170,7 @@ padding: 10px;
 }
 
 .mob-para :hover{
-  color: rgb(255, 123, 233);
+  color: rgb(8, 177, 255) ;
 }
 
 .mob-content{
