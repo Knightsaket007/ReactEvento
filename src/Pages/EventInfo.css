@@ -1,34 +1,213 @@
-body{
-    color: aliceblue;
-}
-.info-container{
-    height: 500px;
+
+.info-container {
     width: 90%;
     background-color: rgb(32, 32, 31);
     margin: 0 auto;
     margin-top: 50px;
     border-radius: 30px;
+   margin-bottom: 40px;
+    height: fit-content ;
+   padding-bottom: 20px;
+}
+.info-sub-container{
     display: flex;
+    /* background-color: aqua; */
 }
 
-.content-div{
+.content-div { 
     width: 70%;
-background-color: aqua;
+    /* background-color: aqua; */
 
 }
 
-.img-info{
+.ill-info {
+    height: 100%;
+    width: 100%;
+
+}
+
+.img-info {
     width: 200px;
     height: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
-.inner-div{
-    background-color: brown;
-   display: flex;
+.Center_1{
+    /* background-color: aqua; */
+    width: 100%;
+    /* position: relative; */
+text-align: center;
+margin-bottom: 50px;
+margin-top: 10px;
+}
+
+
+.inner-div {
+    /* background-color: brown; */
+    display: flex;
     height: fit-content;
+    margin-top: 20px;
 }
 
-.illust-div{
-    width: 40%;
-/* background-color: yellow; */
+.title-handle {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
+
+.illust-div {
+    width: 40%;
+
+    /* background-color: yellow; */
+}
+
+.discription-div {
+    width: 90%;
+    margin: 0 auto;
+
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.all-info-div {
+    width: 100%;
+    height: fit-content;
+    /* background-color: aqua; */
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 30px;
+
+}
+
+.comman-info {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    /* background-color: rgb(108, 99, 255); */
+    text-align: center;
+    position: relative;
+}
+
+
+/* TOOLTIP */
+
+.comman-info::after {
+    background-color: #333;
+    font-weight: 500;
+    font-size: 18;
+    border-radius: 10px;
+    color: rgb(108, 99, 255);
+    display: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+}
+
+.comman-info::before {
+    background-color: #333;
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+}
+
+.comman-info:hover::after {
+    display: block;
+}
+
+.comman-info:hover::before {
+    display: block;
+}
+
+.comman-info::after {
+    content: 'top';
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 10px));
+}
+
+.i-price::after {
+    content: "Price";
+}
+
+.i-seat::after {
+    content: "Seats remain";
+}
+
+.i-rating::after {
+    content: "Rating (out of 5)";
+}
+
+.i-ref::after {
+    content: "Money Refund";
+    }
+
+.comman-info::before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+
+/* Review */
+
+.review-container{
+    width: 95%;
+    margin: 0 auto;
+    height: fit-content;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.review-container:hover{
+    box-shadow: 0px 20px 190px black;
+}
+
+.all-prof-container{
+    display: flex;
+   margin-left: 40px;
+}
+
+.prof-img-div{
+    height: 50px;
+    width: 50px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+   
+}
+.reviewer-img{
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+}
+
+.reviewer-name{
+margin-left: 10px;
+margin-top: -10px;
+}
+
+.star-container{
+margin: 1px 10px 20px 100px;
+    /* background-color: aqua; */
+}
+
+ul#menu li {
+    display:inline;
+  }
+
+  .rev-comment{
+ height: fit-content;
+ width: 85%;
+ margin: 0 auto;
+  }

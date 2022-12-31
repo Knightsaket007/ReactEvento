@@ -1,0 +1,27 @@
+[
+    {"Stars":3,
+  "Name":"User1",
+"Comment":"There is currently no option within the software itself to change or manipulate the text displayed on the list because the software retrieves this list of data from someone else’s API. We have no control over the data returned by the API, our software under test just displays iYou have been asked to test the drop-down box. What would you do? l jWell most testers would start by looking at it. It appears to work correctly. Items can be selected, the Submit button can be clicked. But how would this drop-down behave with a different set of data behind it? Well we don’t know (yet) but it is possible that it could appear or behave differently."
+
+},
+
+
+
+{"Stars":3,
+"Name":"User2",
+"Comment":"n hdgjkcgek cbburejcfejcvueggcukgyedchuh"
+
+},
+
+{"Stars":2,
+"Name":"User3",
+"Comment":"One solution which would allow more scenarios to be tested would be to force the drop-down list to use some fake made-up data. This approach is commonly referred to as testing with mock data or simply “mocking”.ock data is fake data which is artificially inserted into a piece of software. As with most things, there are both advantages and"
+
+},
+
+{"Stars":2.5,
+"Name":"User4",
+"Comment":" very good product"
+
+}
+]

@@ -5,6 +5,8 @@ import UserSignup from "./Pages/UserSignup"
 import UserLog from "./Pages/UserLog"
 import Aboutus from "./Pages/Aboutus"
 import EventInfo from "./Pages/EventInfo"
+import Testing from "./Pages/Testing"
+import Newtest from "./Pages/Newtest"
 let App = () => {
 
   return (
@@ -18,6 +20,8 @@ let App = () => {
           <Route path="/signup" element={<UserSignup/>}></Route>
           <Route path="/login" element={<UserLog/>}></Route>
           <Route path="/eventinfo" element={<EventInfo/>}></Route>
+          <Route path="/test" element={<Testing/>}></Route>
+          <Route path="/Newtest" element={<Newtest/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
