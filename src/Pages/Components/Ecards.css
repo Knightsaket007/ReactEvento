@@ -20,6 +20,7 @@ top: 150px;
   outline: none;
   box-shadow: none;
   border-radius: 5px;
+  
   cursor: text;
   border-style: solid;
   font-size: 100%;
@@ -35,6 +36,19 @@ input[type='search']::-webkit-search-cancel-button {
 }
  .Search-icon :hover {
   color: rgb(225, 0, 255)
+}
+
+
+#Filter{
+  background-color: rgb(255, 255, 255);
+  height:50px ;
+  width: 80px;
+    border-radius: 4px;
+  margin-right: 10px;
+outline: none;
+color: rgb(82, 82, 82);
+font-size: 15px;
+font-weight: 560;
 }
 
 .Search-icon {

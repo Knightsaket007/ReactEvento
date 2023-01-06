@@ -88,13 +88,6 @@ const EventInfo = () => {
                     </div>
 
 
-
-
-
-
-
-
-
 <div className="Center_1">
      <button className="custom-btn btn-2">Buy</button>
      </div>

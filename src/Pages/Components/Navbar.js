@@ -1,6 +1,18 @@
 import './Nav.css'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 function Navbar() { 
+
+  useEffect(()=>{
+    let sess=1;
+    const sign= document.getElementById('sign-button')
+      console.log(sign)
+    if(sess===1){
+        sign.style.display="none"
+    }
+
+  })
+
   return (
     <>
       <div className="nav">
@@ -18,14 +30,14 @@ function Navbar() {
             <span />
           </label>
         </div>
-        <div className="nav-links">
+        <div className="nav-links lnk-hov">
         <Link to="/" >Home</Link>
         <Link to="/Events" >Events</Link>
         <Link to="/about" >About</Link>
         <Link to="" >Contact</Link>
         </div>
 {/* my edits */}
-        <div className='sign-button'>
+        <div id='sign-button'>
         <div className="ct-btn">
                 <div className="gr-move">
                     <span className="gr-shadow2"></span>                        
