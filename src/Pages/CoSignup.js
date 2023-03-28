@@ -1,12 +1,11 @@
-import Navbar from "./Components/Navbar";
-// import './Components/UserSignup.css';
-import Footer from "./Components/Footer"
+import Footer from "./Components/Footer";
 import { Link } from "react-router-dom";
 import {  useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
-const UserSignup = () => {
+function CoSignup() {
+
+
     const [Name, setName] = useState('');
     const [Password, setPassword] = useState('');
     const [Email, setEmail] = useState('');
@@ -15,6 +14,7 @@ const UserSignup = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     
+
     function User_Data() {
         const validate = () => {
             let nameError = '';
@@ -51,7 +51,7 @@ const UserSignup = () => {
         
        
 if(validate()){
-        axios.post(" http://localhost:5000/users/User_Data", {
+        axios.post(" http://localhost:5000/co_Admin/coadmin_signup", {
             Name: Name,
             Password: Password,
             Email: Email,
@@ -71,11 +71,9 @@ if(validate()){
     }
 }
 
+
     return (
-
         <>
-            <Navbar />
-
 
             <div className="main-sign">
 
@@ -87,33 +85,30 @@ if(validate()){
 
                     <form class="form-inline" >
 
-                        <label>Name <span style={{color:"rgb(152, 43, 224)"}} className="imp">* </span></label>
-                        <input name="Name" className="inp" type="text" onChange={(e) => setName(e.target.value)} />
-                        <div className="error" >{nameError}</div> 
-                        
-                        <label>Password <span style={{color:"rgb(152, 43, 224)"}} className="imp">*</span></label>
-                        <input name="Password" className="inp" type="password" onChange={(e) => setPassword(e.target.value)} />
-                         <div className="error">{passwordError}</div>
-
-                        <label>Email <span style={{color:"rgb(152, 43, 224)"}} className="imp">*</span></label>
-                        <input name="Email" className="inp" type="Email" onChange={(e) => setEmail(e.target.value)} />
+                        <label>Name <span className="imp" style={{color:"rgb(32, 199, 82)"}}>* </span></label>
+                        <input name="Name" className="inp" type="text"  onChange={(e) => setName(e.target.value)}/>
+                        <div className="error">{nameError}</div>
+                        <label>Password <span className="imp" style={{color:"rgb(32, 199, 82)"}}>*</span></label>
+                        <input name="Password" className="inp" type="password" onChange={(e) => setPassword(e.target.value)}/>
+                        <div className="error">{passwordError}</div>
+                        <label>Email <span className="imp" style={{color:"rgb(32, 199, 82)"}}>*</span></label>
+                        <input name="Email" className="inp" type="Email" onChange={(e) => setEmail(e.target.value)}/>
                         <div className="error">{emailError}</div>
-                        
-                        <label>Phone <span style={{color:"rgb(152, 43, 224)"}}  className="imp">(optional)</span></label>
-                        <input name="Mobile" className="inp" type="tel" onChange={(e) => setPhone(e.target.value)} />
-                        {/* <div className="error">{nameError}</div> */}
+                        <label>Phone <span className="imp" style={{color:"rgb(32, 199, 82)"}}>(optional)</span></label>
+                        <input name="Mobile" className="inp" type="tel" onChange={(e) => setPhone(e.target.value)}/>
+                        <div className="error">{nameError}</div>
                     </form>
 
-                    <div style={{textAlign:"center"}}><button type="button" onClick={User_Data} style={{ marginTop: '20px', fontSize: '20px' }} className="custom-btn btn-2">Sign-up</button>
-                    <div className="advice">Already have an account? <Link to="/login">Login</Link></div>
+                    <div style={{ textAlign: "center" }}><button onClick={User_Data} type="button" style={{ marginTop: '20px', fontSize: '20px' }} className="custom-btn btn-2">Sign-up</button>
+                    
+                    <div className="advice">Already have an account? <Link to="/co-login">Login</Link></div>
                     </div>
                     <ToastContainer />
-                    
 
                 </div>
 
                 <div className="sign-img-div">
-                    <img src="/ReactEvento/images/signup.svg" className="sign-img" alt="im" />
+                    <img src="/ReactEvento/images/cosign.svg" className="sign-img" alt="im" />
                 </div>
 
             </div>
@@ -125,4 +120,4 @@ if(validate()){
         </>
     )
 }
-export default UserSignup;
+export default CoSignup;

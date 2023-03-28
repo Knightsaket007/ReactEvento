@@ -20,6 +20,14 @@ text-align: center;
   border-radius: 10px;
 }
 
+/* 
+.card-body:hover{
+  outline: none;
+  animation: 2s cubic-bezier(0.01, 0, 0.1, 0.75) 0s infinite normal none running border-flicker;
+  border-radius: 1.1rem;
+  border: 0.3rem #898b8b solid;
+} */
+
 .card-img{
   margin: 0 auto;
   height: 260px;
@@ -89,10 +97,6 @@ a{
 .pureMob-img{
   display: none;
 }
-/* 
-.mob-para{
-  display: none;
-} */
 
 .mob-content{
   display: none;

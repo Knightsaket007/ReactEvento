@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import axios from "axios";
 
-function UserLog() {
+function CoLogin() {
     const [Email, setEmail] = useState('');
     const [Password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -46,7 +46,7 @@ function UserLog() {
     
 
     if (validate()) {
-        axios.post(" http://localhost:5000/users/LogReq", {
+        axios.post(" http://localhost:5000/co_Admin/Log_coAdmin", {
 
             Email: Email,
             Password: Password,
@@ -69,8 +69,6 @@ function UserLog() {
 
             <div className="main-sign">
 
-
-
                 <div className="form-div">
                     <div className="sign-heading">
                         <h1>Login to your Account</h1>
@@ -85,7 +83,7 @@ function UserLog() {
                         <div className="error">{passError}</div>
                     </form>
                     <div><button onClick={User_Data} style={{ marginTop: '20px', fontSize: '20px' }} className="custom-btn btn-2">Login</button></div>
-                    <div className="advice">Don't have an account? <Link to="/signup">Create One</Link></div>
+                    <div className="advice">Don't have an account? <Link to="/co-signup">Create One</Link></div>
 
 
 
@@ -93,7 +91,7 @@ function UserLog() {
                 </div>
 
                 <div className="sign-img-div">
-                    <img src="/ReactEvento/images/signup.svg" className="sign-img" alt="loading" />
+                    <img src="/ReactEvento/images/cosign.svg" className="sign-img" alt="loading" />
                 </div>
 
             </div>
@@ -107,4 +105,4 @@ function UserLog() {
         </>
     )
 }
-export default UserLog;
+export default CoLogin;

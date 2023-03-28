@@ -26,16 +26,16 @@ function Footer() {
             <div className='Side_links'>
                 <ul className='List'>
                   <li className='Order'>
-                    <span><Link to="" style={{ textDecoration: "none", color: "#5a5961" }}>Products </Link></span>
+                    <span><Link to="" style={{ textDecoration: "none", color: "#88888d" }}>Products </Link></span>
                   </li>
                   <li className='Order'>
-                    <span><Link to="" style={{ textDecoration: "none", color: "#5a5961" }}>Contacts </Link> </span>
+                    <span><Link to="" style={{ textDecoration: "none", color: "#88888d" }}>Contacts </Link> </span>
                   </li>
                   <li className='Order'>
-                    <span><Link to="" style={{ textDecoration: "none", color: "#5a5961" }}>About </Link></span>
+                    <span><Link to="" style={{ textDecoration: "none", color: "#88888d" }}>About </Link></span>
                   </li>
                   <li className='Order'>
-                    <span><Link to="" style={{ textDecoration: "none", color: "#5a5961" }}>Links </Link></span>
+                    <span><Link to="" style={{ textDecoration: "none", color: "#88888d" }}>Links </Link></span>
                   </li>
 
                 </ul>

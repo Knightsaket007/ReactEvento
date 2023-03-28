@@ -4,7 +4,7 @@ import Cards from "./Components/Cards";
 import Footer from "./Components/Footer";
 import { GiReceiveMoney } from 'react-icons/gi';
 import { Link } from "react-router-dom";
-// import image1 from "./ReactEvento/img/front001.png"
+
 function Home(){
   return (
     <> 

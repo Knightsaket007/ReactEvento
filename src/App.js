@@ -7,6 +7,9 @@ import Aboutus from "./Pages/Aboutus"
 import EventInfo from "./Pages/EventInfo"
 import Testing from "./Pages/Testing"
 import Newtest from "./Pages/Newtest"
+import CoSignup from "./Pages/CoSignup"
+import CoLogin from "./Pages/CoLogin"
+import UserHome from "./Pages/UserHome"
 let App = () => {
 
   return (
@@ -22,6 +25,9 @@ let App = () => {
           <Route path="/eventinfo" element={<EventInfo/>}></Route>
           <Route path="/test" element={<Testing/>}></Route>
           <Route path="/Newtest" element={<Newtest/>}></Route>
+          <Route path="/co-signup" element={<CoSignup/>}></Route>
+          <Route path="/co-login" element={<CoLogin/>}></Route>
+          <Route path="/Home" element={<UserHome/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
