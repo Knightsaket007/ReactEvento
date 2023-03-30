@@ -549,6 +549,10 @@ input[type="file"] {
     margin: 0 auto;
     border-radius: 10px;
 }
+
+.pass-change p{   
+    margin-top: 2px;
+}
  
   
 @media(max-width:800px){
@@ -576,6 +580,19 @@ font-size:15px;
 #edit-btn{
 width: 130px;
 margin-left: 30%;
+margin-top: 30px;
+}
+
+.pass-change{
+    width: 100px;
+    height: 51px;
+    padding-top: 0px;
+    border-radius: 10px;
+   
+}
+
+.pass-change p{
+    font-size: 11px;
 }
 
 }

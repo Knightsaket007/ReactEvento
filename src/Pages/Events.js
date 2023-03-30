@@ -14,6 +14,7 @@ function Events() {
     // console.log(txt);
     // },[])
 
+
     return (
         <>
             <Navbar />
@@ -21,12 +22,27 @@ function Events() {
             {/* searchBar */}
 
             <div className="search" >
-                <select id="Filter" >
+                {/* <select id="Filter" >
                     <option value="1">All</option>
                     <option value="2">new event</option>
                     <option value="3">more eventsssssssssssssssssssssskkkkkkkk</option>
                     <option value="3">more eventsssssssssssssssssssssskkkkkkkk</option>
-                </select>
+                </select> */}
+
+              
+
+{/* component */}
+
+
+
+
+{/* component */}
+
+
+
+
+
+
 
                 <input className="search-bar" type='search' />
                 <button className="Search-icon"><BsSearch /></button>
