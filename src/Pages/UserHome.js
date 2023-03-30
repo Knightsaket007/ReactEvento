@@ -24,7 +24,7 @@ const UserHome = () => {
 
 
   useEffect(() => {
-    // renderHomePage();
+    renderHomePage();
     renderEditPage();
 
 
@@ -32,8 +32,6 @@ const UserHome = () => {
 
 
   const renderHomePage = () => {
-
-
 
     function go() {
       let ano = document.querySelector(".anouncement-container");
@@ -138,7 +136,7 @@ const UserHome = () => {
             <input className="edit-inputs"></input><br />
             <label >Address</label><br />
             <input className="edit-inputs"></input><br/>
-            <button type="submit" style={{fontSize:"17px"}} className="custom-btn btn-2">Change Password <BsShieldLockFill/></button>
+            <button type="submit" style={{fontSize:"17px"}} className="custom-btn btn-2 pass-change" ><p>Change Password <BsShieldLockFill/></p></button>
     
           </form>
         </div>
