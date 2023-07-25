@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Home(){
   return (
     <> 
-      <Navbar />
+      <Navbar/>
 
       {/* SLIDER */}
       <div className="carousel">

@@ -1,47 +1,37 @@
-import { TiStarFullOutline, TiStarHalfOutline, TiStarOutline } from 'react-icons/ti';
-import React, { useRef, useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import "./Rating.json"
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+import jwt_decode from 'jwt-decode';
+
 const Testing = () => {
-  const containerRef = useRef(null);
-  
-  const [rating, setRating] = useState(5);  // Example rating value
+  const handleGoogleLoginSuccess = async (credentialResponse) => {
+    const { credential } = credentialResponse;
 
-  useEffect(() => {
-    // Calculate the number of full, half, and empty stars needed
-    let fullStars=0;
-    if(rating%1<=0.5){
-  fullStars = Math.floor(rating);}
-  if(rating%1>=0.5){
-    fullStars = Math.ceil(rating);}
-    const halfStars = rating % 1 === 0.5 ? 0 : 1;
-    const emptyStars = 5 - fullStars - halfStars;
+    // Decoding the JWT to get user information
+    const decodedToken = jwt_decode(credential);
+    const email = decodedToken.email;
+    const name = decodedToken.name;
+    console.log('Email:', email);
+    console.log('name:', name);
 
-    // Create the full, half, and empty star elements
-    const starElements = [];
-    for (let i = 0; i < fullStars; i++) {
-      const element = <TiStarFullOutline key={i} />;
-      starElements.push(element);
+    try {
+      const response = await axios.post('/api/login', { email });
+      console.log(response.data);
+    } catch (error) {
+      console.log('Login Failed:', error);
     }
-    if (halfStars) {
-      const element = <TiStarHalfOutline key={fullStars} />;
-      starElements.push(element);
-    }
-    for (let i = 0; i < emptyStars; i++) {
-      const element = <TiStarOutline key={fullStars + halfStars + i} />;
-      starElements.push(element);
-    }
-
-    // Clear the container element and append the star elements to it
-    containerRef.current.innerHTML = '';
-    ReactDOM.render(<React.Fragment>{starElements}</React.Fragment>, containerRef.current);
-  }, [rating]);
+  };
 
   return (
     <>
-    
-      <div ref={containerRef} style={{ color: 'white' }} />
-  
+      <GoogleOAuthProvider clientId="404172413531-j2e4fsuun6468l7jeb8h1n8f5huorn9u.apps.googleusercontent.com">
+        <GoogleLogin
+          onSuccess={handleGoogleLoginSuccess}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+        />
+      </GoogleOAuthProvider>
     </>
   );
 };

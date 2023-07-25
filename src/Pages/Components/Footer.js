@@ -55,7 +55,7 @@ function Footer() {
               <div className='link-subCat'>
                 <ul className='List'>
                   <li className='li-head'> <span style={{ textDecoration: "none", color:"rgb(172, 164, 164)"}}>Evo Part</span></li>
-                  <li className='li-sub'> <span><Link to="" style={{ textDecoration: "none" }}>Organiger </Link> </span></li>
+                  <li className='li-sub'> <span><Link to="/co-signup" style={{ textDecoration: "none" }}>Organiger </Link> </span></li>
                   <li className='li-sub'> <span><Link to="" style={{ textDecoration: "none"}}>Promotion </Link> </span></li>
                 </ul>
               </div>

@@ -1,10 +1,9 @@
-import Navbar from "./Components/Navbar";
 import './Components/UserSignup.css';
 import Footer from "./Components/Footer"
 import { Link } from "react-router-dom";
-import { useState } from "react";
-
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 
 function CoLogin() {
@@ -12,7 +11,24 @@ function CoLogin() {
     const [Password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passError, setPasswordError] = useState('');
+    const Navigate= useNavigate();
 
+    
+//Login check 
+
+
+useEffect (()=>{
+axios.get('http://localhost:5000/co_Admin/user-auth').then(res=>{
+    console.log(res.data)
+    if(res.data==='login'){
+    } 
+    else{
+        window.alert(" login kar ")
+
+    }
+})
+
+},[])
 
     function User_Data() {
 
@@ -45,6 +61,7 @@ function CoLogin() {
         }
     
 
+        
     if (validate()) {
         axios.post(" http://localhost:5000/co_Admin/Log_coAdmin", {
 
@@ -53,11 +70,13 @@ function CoLogin() {
         }).then(res => {
             console.log(res)
             if (res.data === "not logged") {
-                alert("not logged", {
+                toast.error("User Email and Password not match!", {
                     theme: "dark"
                 })
             } else if (res.data === "Logged")
-                alert("Log IN!")
+                
+                Navigate('/co-home')
+
 
         })
     }
@@ -65,7 +84,7 @@ function CoLogin() {
 
     return (
         <>
-            <Navbar />
+        
 
             <div className="main-sign">
 
@@ -97,6 +116,7 @@ function CoLogin() {
             </div>
 
 
+            <ToastContainer />
 
             <div className="line-container">
                 <div className="line"></div>

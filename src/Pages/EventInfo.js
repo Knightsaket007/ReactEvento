@@ -3,10 +3,12 @@ import "./EventInfo.css"
 import { ImPriceTag } from 'react-icons/im';
 import { TbArmchair } from 'react-icons/tb';
 import { FcRatings } from 'react-icons/fc';
-import { RiRefund2Fill } from 'react-icons/ri';
+import { TbReceiptRefund } from 'react-icons/tb';
 import { TiStarFullOutline } from 'react-icons/ti';
 import { TiStarHalfOutline } from 'react-icons/ti';
 import { TiStarOutline } from 'react-icons/ti';
+import { FaCalendarTimes } from 'react-icons/fa';
+import { MdBookmarkAdd } from 'react-icons/md';
 import Rating from "./Rating.json"
 // import { createAvatar } from '@dicebear/avatars';
 import Footer from "./Components/Footer";
@@ -19,7 +21,6 @@ const EventInfo = () => {
     function getStarElements(val) {
 
         const fullStars = Math.floor(val);
-        console.log(fullStars)
         const halfStars = val % 1 >= 0.5 ? 1 : 0;
         const emptyStars = 5 - fullStars - halfStars;
 
@@ -29,10 +30,12 @@ const EventInfo = () => {
             const element = <TiStarFullOutline key={i} />;
             starElements.push(element);
         }
+
         if (halfStars) {
             const element = <TiStarHalfOutline key={fullStars} />;
             starElements.push(element);
         }
+        
         for (let i = 0; i < emptyStars; i++) {
             const element = <TiStarOutline key={fullStars + halfStars + i} />;
             starElements.push(element);
@@ -49,11 +52,12 @@ const EventInfo = () => {
 
                 <div className="info-container">
                     <div className="info-sub-container">
+                   
                         <div className="content-div">
-                            <div className="inner-div">
-                                <img className="img-info" src="/ReactEvento/images/rodeo.png" alt="loading..." />
-                                <div className="title-handle"><h3>Title here </h3> </div>
-                            </div>
+                            
+                             <div id="img-info-container" >  <img className="img-info" src="/ReactEvento/images/helo.png" alt="loading..." /></div>
+                                <div className="title-handle"><h2>Title here </h2> </div>
+                            
 
                             <div className="discription-div">
                                 <p>jdjbbfurbcubfubcjfbcbfvj hcfu v jf vjfbvufbvulfu vfhhvfhv gfuhvhufgygvuyfb bu vgfuvufguvgfjv ufygvfvu f dkdnnif cfgvhfvf</p>
@@ -74,26 +78,30 @@ const EventInfo = () => {
                                 </div>
 
                                 <div className="comman-info i-ref">
-                                    <h1><RiRefund2Fill /></h1>
+                                    <h1><TbReceiptRefund /></h1>
                                     <h2>No</h2>
+                                </div>
+                                <div className="comman-info i-date">
+                                    <h1><FaCalendarTimes /></h1>
+                                    <h2>12-4-2023</h2>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div className="illust-div">
-                            <img src="/ReactEvento/images/infopic.svg" className="ill-info" alt="loading..." />
-                        </div>
+                        
 
                     </div>
 
 
-<div className="Center_1">
-     <button className="custom-btn btn-2">Buy</button>
-     </div>
+                    <div className="Center_1"> 
+                        <button className="custom-btn btn-2">Buy</button>
+                        <div id="save-icn"><MdBookmarkAdd/></div>
+                    </div>
 
 
                     {/* review */}
+                    
                     {
                         Rating.map((item, index) => {
                             const starElements = getStarElements(item.Stars);
@@ -131,7 +139,7 @@ const EventInfo = () => {
                 </div>
 
             </body>
-            <Footer/>
+            <Footer />
         </>
     )
 }

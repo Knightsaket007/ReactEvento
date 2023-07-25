@@ -1,8 +1,9 @@
 import Navbar from "./Components/Navbar";
 // import './Components/UserSignup.css';
 import Footer from "./Components/Footer"
+import Google_auth from "./Components/Google_auth"
 import { Link } from "react-router-dom";
-import {  useState } from "react";
+import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
@@ -14,7 +15,7 @@ const UserSignup = () => {
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    
+
     function User_Data() {
         const validate = () => {
             let nameError = '';
@@ -23,13 +24,13 @@ const UserSignup = () => {
 
             if (!Name) {
                 nameError = ' Name is required';
-            }else {
+            } else {
                 setNameError('');
             }
 
             if (!Email.includes('@')) {
                 emailError = 'Invalid email address';
-                
+
             } else {
                 setEmailError('');
             }
@@ -40,7 +41,7 @@ const UserSignup = () => {
                 setPasswordError('');
             }
 
-            if (nameError ) {
+            if (nameError) {
                 setNameError(nameError);
                 setEmailError(emailError);
                 setPasswordError(passwordError);
@@ -48,28 +49,28 @@ const UserSignup = () => {
             }
             return true;
         }
-        
-       
-if(validate()){
-        axios.post(" http://localhost:5000/users/User_Data", {
-            Name: Name,
-            Password: Password,
-            Email: Email,
-            Phone: Phone,
-        }).then(res => {
-            console.log(res)
-            if (res.data === "user exists") {
-                toast.error("User already exists!", {
-                    theme: "dark"
-                })
-            } else if (res.data === "sent") {
-                toast.success("Sign IN!")
-            } else {
-                toast.warn("error")
-            }
-        })
+
+
+        if (validate()) {
+            axios.post(" http://localhost:5000/users/User_Data", {
+                Name: Name,
+                Password: Password,
+                Email: Email,
+                Phone: Phone,
+            }).then(res => {
+                console.log(res)
+                if (res.data === "user exists") {
+                    toast.error("User already exists!", {
+                        theme: "dark"
+                    })
+                } else if (res.data === "sent") {
+                    toast.success("Sign IN!")
+                } else {
+                    toast.warn("error")
+                }
+            })
+        }
     }
-}
 
     return (
 
@@ -87,28 +88,31 @@ if(validate()){
 
                     <form class="form-inline" >
 
-                        <label>Name <span style={{color:"rgb(152, 43, 224)"}} className="imp">* </span></label>
+                        <label>Name <span style={{ color: "rgb(152, 43, 224)" }} className="imp">* </span></label>
                         <input name="Name" className="inp" type="text" onChange={(e) => setName(e.target.value)} />
-                        <div className="error" >{nameError}</div> 
-                        
-                        <label>Password <span style={{color:"rgb(152, 43, 224)"}} className="imp">*</span></label>
-                        <input name="Password" className="inp" type="password" onChange={(e) => setPassword(e.target.value)} />
-                         <div className="error">{passwordError}</div>
+                        <div className="error" >{nameError}</div>
 
-                        <label>Email <span style={{color:"rgb(152, 43, 224)"}} className="imp">*</span></label>
+                        <label>Password <span style={{ color: "rgb(152, 43, 224)" }} className="imp">*</span></label>
+                        <input name="Password" className="inp" type="password" onChange={(e) => setPassword(e.target.value)} />
+                        <div className="error">{passwordError}</div>
+
+                        <label>Email <span style={{ color: "rgb(152, 43, 224)" }} className="imp">*</span></label>
                         <input name="Email" className="inp" type="Email" onChange={(e) => setEmail(e.target.value)} />
                         <div className="error">{emailError}</div>
-                        
-                        <label>Phone <span style={{color:"rgb(152, 43, 224)"}}  className="imp">(optional)</span></label>
+
+                        <label>Phone <span style={{ color: "rgb(152, 43, 224)" }} className="imp">(optional)</span></label>
                         <input name="Mobile" className="inp" type="tel" onChange={(e) => setPhone(e.target.value)} />
                         {/* <div className="error">{nameError}</div> */}
+
                     </form>
 
-                    <div style={{textAlign:"center"}}><button type="button" onClick={User_Data} style={{ marginTop: '20px', fontSize: '20px' }} className="custom-btn btn-2">Sign-up</button>
-                    <div className="advice">Already have an account? <Link to="/login">Login</Link></div>
+                    <div style={{ textAlign: "center" }}><button type="button" onClick={User_Data} style={{ marginTop: '20px', fontSize: '20px' }} className="custom-btn btn-2">Sign-up</button>
+                        <div className="advice">Already have an account? <Link to="/user-login">Login</Link></div>
                     </div>
-                    <ToastContainer />
-                    
+
+
+                    <div className="alt-auth"><h2>or</h2></div>
+                    <div className="g-auth"><Google_auth  authType="signup"/></div>
 
                 </div>
 
@@ -121,6 +125,9 @@ if(validate()){
             <div className="line-container">
                 <div className="line"></div>
             </div>
+
+            <ToastContainer />
+
             <Footer />
         </>
     )

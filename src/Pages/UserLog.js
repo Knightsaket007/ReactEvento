@@ -1,13 +1,15 @@
-import Navbar from "./Components/Navbar";
+
 import './Components/UserSignup.css';
 import Footer from "./Components/Footer"
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import Google_auth from "./Components/Google_auth"
 
 import axios from "axios";
 
 function UserLog() {
+    const Navigate = useNavigate();
     const [Email, setEmail] = useState('');
     const [Password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -57,7 +59,8 @@ function UserLog() {
                     theme: "dark"
                 })
             } else if (res.data === "Logged")
-                alert("Log IN!")
+               
+                Navigate('/Events')
 
         })
     }
@@ -65,7 +68,7 @@ function UserLog() {
 
     return (
         <>
-            <Navbar />
+  
 
             <div className="main-sign">
 
@@ -87,7 +90,8 @@ function UserLog() {
                     <div><button onClick={User_Data} style={{ marginTop: '20px', fontSize: '20px' }} className="custom-btn btn-2">Login</button></div>
                     <div className="advice">Don't have an account? <Link to="/signup">Create One</Link></div>
 
-
+                    <div className="alt-auth"><h2>or</h2></div>
+                    <div className="g-auth"><Google_auth  authType="login"/></div>
 
 
                 </div>

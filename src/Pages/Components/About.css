@@ -1,14 +1,16 @@
 .main-about-container {
     height: 500px;
     width: 95%;
-    background-color: rgb(144, 129, 162);
+    background-color: rgb(68, 66, 71);
     margin: 0 auto;
     margin-top: 50px;
     border-radius: 20px;
     margin-bottom: 30px;
+    padding-top: 30px;
+    color: aliceblue;
 }
 
-.about-heading {
+/* .about-heading {
     background: linear-gradient(62deg, rgb(21, 213, 235) 0.00%, rgb(255, 0, 191) 100.00%);
     letter-spacing: 5px;
     width: 250px;
@@ -19,7 +21,7 @@
     position: relative;
     border-radius: 20px;
     top: -37px;
-}
+} */
 
 .main-box {
     display: flex;

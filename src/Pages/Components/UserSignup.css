@@ -27,8 +27,7 @@
   width: 700px;
   height: 700px;
   /* background-color: bisque; */
-  margin-top: -50px;
-  margin-right: 20px;
+  margin:-50px 20px 0px 10px;
 }
 
 .sign-img {
@@ -110,4 +109,14 @@ margin-bottom: 10px;
     text-align: center;
     margin-top: 30px;
   }
+}
+
+.alt-auth{
+  color:#ddd;
+  width: 100%;
+  text-align: center;
+}
+.g-auth{
+  width: fit-content;
+  margin: 0 auto;
 }
